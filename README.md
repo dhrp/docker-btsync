@@ -24,3 +24,13 @@ docker run -d -p 8888:8888 -p 55555:55555 -v /srv/btsync/:/btsync/ btsync /bin/s
 
 `-v` mount a local directory in the container `[host-dir]:[container-dir]`
 > btsync.conf should be located in a directory mounted to the container directory `/btsync/`
+
+
+### Access BitTorrent Sync WebUI ###
+
+```
+http://<yourdomain.com>:8888
+
+login: admin
+password: password
+```
