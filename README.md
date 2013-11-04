@@ -28,9 +28,9 @@ docker run -d -p 8888:8888 -p 55555:55555 -v /srv/btsync/:/btsync/ btsync /bin/s
 
 ### Access BitTorrent Sync WebUI ###
 
-```
+
 http://<yourdomain.com>:8888
 
 login: admin
 password: password
-```
+
