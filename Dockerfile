@@ -18,3 +18,7 @@ EXPOSE 8888
 # Listening port
 EXPOSE 55555
 
+ENTRYPOINT ["/usr/bin/btsync"]
+CMD ["--config", "btsync.conf", "--nodaemon"]
+
+
