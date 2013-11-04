@@ -14,7 +14,7 @@ docker build -t btsync .
 ### Running BitTorrent Sync ###
 
 ```
-docker run -d -p 8888:8888 -p 55555:55555 -v /srv/btsync/:/btsync/ btsync /bin/sh -c "/usr/bin/btsync --nodaemon --config btsync.conf"
+docker run -d -p 8888:8888 -p 55555:55555 -v /srv/btsync/:/btsync/ btsync
 ```
 
 `-d` run in detached mode
@@ -32,4 +32,10 @@ http://&lt;yourdomain.com&gt;:8888
 
 login: admin
 <br>password: password
+
+<p>Turn off access to the web ui by not exposing port 8888
+```
+docker run -d -p 55555:55555 -v /srv/btsync/:/btsync/ btsync
+```
+
 
