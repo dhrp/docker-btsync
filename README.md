@@ -30,12 +30,19 @@ docker run -d -p 8888:8888 -p 55555:55555 -v /srv/btsync/:/btsync/ btsync
 
 http://&lt;yourdomain.com&gt;:8888
 
-login: admin
-<br>password: password
+Web ui defaults
+>login: admin
+><br>password: password
 
 <p>Turn off access to the web ui by not exposing port 8888
 ```
 docker run -d -p 55555:55555 -v /srv/btsync/:/btsync/ btsync
+```
+
+<p>Configure web ui login and password on container run
+```
+docker run -d -p 8888:8888 -p 55555:55555 -v /srv/btsync/:/btsync/ -e LOGIN="<login>" -e PASSWORD="<password>" btsync
+
 ```
 
 
