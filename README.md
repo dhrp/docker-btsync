@@ -14,7 +14,7 @@ docker build -t btsync .
 ### Running BitTorrent Sync ###
 
 ```
-docker run -d -p 8888:8888 -p 55555:55555 -v /srv/btsync/:/btsync/ btsync
+docker run -d -p 8888:8888 -p 55555:55555 -v /srv/btsync/:/btsync/ btsync /bin/sh -c "/usr/bin/btsync --nodaemon --config btsync.conf"
 ```
 
 `-d` run in detached mode
